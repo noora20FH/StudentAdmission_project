@@ -6,7 +6,3 @@ def say_hello(request):
     # instead of returning http response, we use render to render http markup in templates folder
     return render(request, 'hello.html', {'name': 'Noora'})
 
-def say_hello(request): 
-    # return HttpResponse('Hello Noora!')
-    # instead of returning http response, we use render to render http markup in templates folder
-    return render(request, 'hello.html', {'name': 'Noora'})
