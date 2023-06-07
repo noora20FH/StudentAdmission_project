@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Student
+from .models import Student, AdmissionResult
 
 
 class StudentSerializer(serializers.ModelSerializer):
@@ -11,3 +11,9 @@ class StudentSerializer(serializers.ModelSerializer):
                   'RegistrationNo',
                   'Email',
                   'Course')
+class AdmissionResult(serializers.ModelSerializer):
+    class Meta:
+        model = AdmissionResult
+        fields = ('studentId',
+                  'stdName',
+                  'admsResult')

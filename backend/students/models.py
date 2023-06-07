@@ -10,3 +10,8 @@ class Student(models.Model):
     RegistrationNo = models.CharField(max_length=100)
     Email = models.CharField(max_length=100)
     Course = models.CharField(max_length=100)
+
+class AdmissionResult(models.Model):
+    studentId = models.AutoField(primary_key=True)
+    stdName = models.CharField(max_length=100)
+    Result = models.CharField(max_length=100)
