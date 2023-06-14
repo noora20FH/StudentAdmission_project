@@ -8,11 +8,13 @@ class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = ('studentId',
-                  'FirstName',
-                  'LastName',
-                  'RegistrationNo',
-                  'Email',
-                  'Course')
+                  'stdName',
+                  'averageScore',
+                  'achievement',
+                  'skillCertificate',
+                  'testResult',
+                  'schoolName',
+                  'schoolAccreditation')
         
 class AdmissionResultSerializer(serializers.ModelSerializer):
     class Meta:
