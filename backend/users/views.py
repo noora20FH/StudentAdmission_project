@@ -1,15 +1,7 @@
 from rest_framework.views import APIView
-from .serializers import UserSerializer, UserzSerializer
-from django.http.response import JsonResponse
-from django.contrib.auth.models import User
-from django.http.response import Http404
 from rest_framework.response import Response
-from rest_framework import viewsets
 from .models import UserProfile
-
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+from .serializers import UserzSerializer
 
 class GetUserProfileView(APIView):
     def get(self, request, format=None):
@@ -44,4 +36,3 @@ class UpdateUserProfileView(APIView):
             return Response({ 'profile': user_profile.data, 'username': str(username) })
         except:
             return Response({ 'error': 'Something went wrong when updating profile' })
-
