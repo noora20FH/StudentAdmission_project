@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     "corsheaders",
     "users",
     "accounts",
-    "student_submit",
 ]
 
 CORS_ORIGIN_ALLOW_ALL = True

@@ -6,13 +6,11 @@ class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
         fields = ('studentId',
-                  'stdName',
-                  'averageScore',
-                  'achievement',
-                  'skillCertificate',
-                  'testResult',
-                  'schoolName',
-                  'schoolAccreditation')
+                  'FirstName',
+                  'LastName',
+                  'RegistrationNo',
+                  'Email',
+                  'Course')
         
 class AdmissionResultSerializer(serializers.ModelSerializer):
     class Meta:
@@ -37,4 +35,4 @@ class UserSerializer(serializers.ModelSerializer):
         def create(self, validated_data):
             user = User.objects.create_user(**validated_data)
             Token.objects.create(user=user)
-            return user
+            return user ('admsResult')
