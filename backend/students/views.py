@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
-from .serializers import StudentSerializer, UserSerializer
+from .serializers import StudentSerializer, UserSerializer, AdmissionResultSerializer
 from django.http.response import JsonResponse
-from .models import Student
+from .models import Student, AdmissionResult
 from django.contrib.auth.models import User
 from django.http.response import Http404
 from rest_framework.response import Response
@@ -20,6 +20,10 @@ class StudentUpdateDestoryView(generics.RetrieveUpdateDestroyAPIView):
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+
+class MabacInputView(generics.ListCreateAPIView):
+    queryset = AdmissionResult.objects.all()
+    serializer_class = AdmissionResultSerializer
     
 
 

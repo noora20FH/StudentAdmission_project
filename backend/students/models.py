@@ -14,4 +14,9 @@ class Student(models.Model):
 class AdmissionResult(models.Model):
     studentId = models.AutoField(primary_key=True)
     stdName = models.CharField(max_length=100)
-    Result = models.CharField(max_length=100)
+    c1 = models.CharField(max_length=100, default='')
+    c2 = models.CharField(max_length=100, default='')
+    c3 = models.CharField(max_length=100, default='')
+    c4 = models.CharField(max_length=100, default='')
+    c5 = models.CharField(max_length=100, default='')
+    

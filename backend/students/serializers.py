@@ -14,12 +14,17 @@ class StudentSerializer(serializers.ModelSerializer):
                   'Email',
                   'Course')
         
-class AdmissionResult(serializers.ModelSerializer):
+class AdmissionResultSerializer(serializers.ModelSerializer):
     class Meta:
         model = AdmissionResult
         fields = ('studentId',
                   'stdName',
-                  'admsResult')
+                  'c1',
+                  'c2',
+                  'c3',
+                  'c4',
+                  'c5'
+                  )
         
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
